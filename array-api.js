@@ -86,16 +86,17 @@ const students = [
 {
   // reduce: 배열을 돌며 어떤 값을 누적할때 사용
   // reduceRight: 배열을 반대로 돌아서 누적함
-  const result = students.reduce((prev, curr) => prev + curr.score);
+  const result = students.reduce((prev, curr) => prev + curr.score, 0);
   console.log(result / students.length);
+
   /*
- ( {
+  const result = students.reduce((prev, curr) => {
     console.log('----------');
     console.log(prev);
     console.log(curr);
     return prev + curr.score; //리턴값이 다음의 prev값이 됨
   }, 0);
-  console.log(result / students.length); 
+  console.log(result / students.length);
   */
 }
 
